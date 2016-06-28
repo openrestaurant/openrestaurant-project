@@ -1,12 +1,7 @@
 {
     "name": "openrestaurant/openrestaurant-project",
-    "description": "A Composer-based installer for Open Restaurant",
+    "description": "A Composer-based installer for Open Restaurant.",
     "type": "project",
-    "require": {
-        "composer/installers": "^1.0",
-        "drupal-composer/drupal-scaffold": "^2.0",
-        "drupal/openrestaurant": "2.0.x-dev"
-    },
     "license": "GPL-2.0+",
     "authors": [
         {
@@ -20,8 +15,17 @@
             "url": "https://packages.drupal.org/8"
         }
     },
+    "require": {
+      "composer/installers": "^1.0",
+      "drupal-composer/drupal-scaffold": "^2.0",
+      "cweagans/composer-patches": "~1.0",
+      "drupal/openrestaurant": "2.0.x-dev"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "conflict": {
+      "drupal/drupal": "*"
+    },
     "config": {
       "bin-dir": "bin/"
     },
@@ -31,6 +35,7 @@
       ]
     },
     "scripts": {
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
       "post-install-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "OpenRestaurant\\Composer\\ScriptHandler::buildScaffold",
@@ -42,11 +47,11 @@
         "OpenRestaurant\\Composer\\ScriptHandler::createRequiredFiles"
       ]
     },
-    "extras": {
+    "extra": {
       "installer-paths": {
         "docroot/core": ["type:drupal-core"],
         "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-        "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+        "docroot/profiles/{$name}": ["type:drupal-profile"],
         "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
         "drush/contrib/{$name}": ["type:drupal-drush"]
       }

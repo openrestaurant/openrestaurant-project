@@ -1,0 +1,17 @@
+{
+    "name": "openrestaurant/openrestaurant-project",
+    "description": "A Composer-based installer for Open Restaurant",
+    "type": "project",
+    "require": {
+        "composer/installers": "^1.0",
+        "drupal-composer/drupal-scaffold": "^2.0"
+    },
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Arshad Chummun",
+            "email": "arshad@chummun.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

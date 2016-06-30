@@ -1,5 +1,7 @@
 A Composer-based installer for [Open Restaurant](http://open.restaurant).
 
+## Usage
+
 We highly recommend using Composer to install your Open Restaurant codebase.
 
 Use the following command to create a new Open Restaurant project:

@@ -24,6 +24,7 @@
       "drupal/admin_toolbar": "1.18.0",
       "drupal/config_update": "1.2.0",
       "drupal/ctools": "3.0.0-alpha27",
+      "drupal/console": "~1.0",
       "drupal/demo_content": "1.x-dev",
       "drupal/disqus": "1.0.0-rc3",
       "drupal/eck": "1.0.0-alpha2",

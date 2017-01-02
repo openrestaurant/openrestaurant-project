@@ -1,3 +1,7 @@
+Open Restaurant 2.0.1, 2017-01-02
+---------------------------------------
+Use openrestaurant package from packagist
+
 Open Restaurant 2.0.0, 2016-12-22
 ---------------------------------------
 Update drupal/openrestaurant to 2.0.0

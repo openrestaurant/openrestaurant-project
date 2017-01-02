@@ -1,76 +1,56 @@
 {
-    "name": "openrestaurant/openrestaurant-project",
-    "description": "A Composer-based installer for Open Restaurant.",
-    "type": "project",
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "Arshad Chummun",
-            "email": "arshad@chummun.com"
-        }
-    ],
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    },
-    "require": {
-      "composer/installers": "^1.0",
-      "drupal-composer/drupal-scaffold": "^2.0",
-      "cweagans/composer-patches": "~1.0",
-      "drupal/openrestaurant": "2.0.0",
-      "drupal/address": "1.x-dev",
-      "drupal/admin_toolbar": "1.18.0",
-      "drupal/config_update": "1.2.0",
-      "drupal/ctools": "3.0.0-alpha27",
-      "drupal/console": "~1.0",
-      "drupal/demo_content": "1.x-dev",
-      "drupal/disqus": "1.0.0-rc3",
-      "drupal/eck": "1.0.0-alpha2",
-      "drupal/features": "3.2.0",
-      "drupal/field_collection": "1.0.0-alpha1",
-      "drupal/geocoder": "2.0.0-alpha5",
-      "drupal/geofield": "1.0.0-alpha2",
-      "drupal/inline_entity_form": "1.0.0-beta1",
-      "drupal/pathauto": "1.0.0-beta1",
-      "drupal/token": "1.0.0-beta2",
-      "drupal/tvi": "1.0.0-beta1",
-      "drupal/radix": "3.0.0"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "conflict": {
-      "drupal/drupal": "*"
-    },
-    "config": {
-      "bin-dir": "bin/"
-    },
-    "autoload": {
-      "classmap": [
-        "scripts/ScriptHandler.php"
-      ]
-    },
-    "scripts": {
-      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-      "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "OpenRestaurant\\Composer\\ScriptHandler::buildScaffold",
-        "OpenRestaurant\\Composer\\ScriptHandler::createRequiredFiles"
-      ],
-      "post-update-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "OpenRestaurant\\Composer\\ScriptHandler::buildScaffold",
-        "OpenRestaurant\\Composer\\ScriptHandler::createRequiredFiles"
-      ]
-    },
-    "extra": {
-      "installer-paths": {
-        "web/core": ["type:drupal-core"],
-        "web/profiles/{$name}": ["type:drupal-profile"],
-        "web/profiles/openrestaurant/modules/contrib/{$name}": ["type:drupal-module"],
-        "web/profiles/openrestaurant/themes/{$name}": ["type:drupal-theme"],
-        "drush/contrib/{$name}": ["type:drupal-drush"]
-      }
+  "name": "openrestaurant/openrestaurant-project",
+  "description": "A Composer-based installer for Open Restaurant.",
+  "type": "project",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "bin-dir": "bin/"
+  },
+  "autoload": {
+    "classmap": [
+      "scripts/ScriptHandler.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Arshad Chummun",
+      "email": "arshad@chummun.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "post-install-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "OpenRestaurant\\Composer\\ScriptHandler::buildScaffold",
+      "OpenRestaurant\\Composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "OpenRestaurant\\Composer\\ScriptHandler::buildScaffold",
+      "OpenRestaurant\\Composer\\ScriptHandler::createRequiredFiles"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/profiles/{$name}": ["type:drupal-profile"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/themes/{$name}": ["type:drupal-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    }
+  },
+  "require": {
+    "composer/installers": "^1.0",
+    "drupal-composer/drupal-scaffold": "^2.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/openrestaurant": "2.x-dev"
+  }
 }

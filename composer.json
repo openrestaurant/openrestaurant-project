@@ -10,6 +10,9 @@
       "scripts/ScriptHandler.php"
     ]
   },
+  "config": {
+    "bin-dir": "bin/"
+  },
   "authors": [
     {
       "name": "Arshad Chummun",
@@ -43,6 +46,12 @@
       "web/themes/{$name}": ["type:drupal-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     }
+  },
+  "require-dev": {
+    "behat/mink-extension": "^2.2",
+    "behat/mink-goutte-driver": "^1.2",
+    "behat/behat": "^3.0",
+    "drupal/drupal-extension": "^3.2"
   },
   "require": {
     "composer/installers": "^1.0",

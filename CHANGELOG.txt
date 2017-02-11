@@ -1,6 +1,10 @@
+Open Restaurant 2.1.1, 2017-02-11
+---------------------------------------
+Add the composer.lock file.
+
 Open Restaurant 2.1.0, 2017-01-23
 ---------------------------------------
-- Use openrestaurant/openrestaurant to ~2.10
+- Use openrestaurant/openrestaurant to ~2.1.0
 
 Open Restaurant 2.0.1, 2017-01-02
 ---------------------------------------

@@ -1,3 +1,7 @@
+Open Restaurant 2.3.0, 2017-07-24
+---------------------------------------
+- Use openrestaurant/openrestaurant to 2.3.0
+
 Open Restaurant 2.2.0, 2017-05-29
 ---------------------------------------
 - Use openrestaurant/openrestaurant to 2.2.0

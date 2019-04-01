@@ -1,4 +1,6 @@
 # Ignore Composer-managed dependencies.
 vendor/
+bin
+web
 
 .idea
